@@ -2,8 +2,12 @@
 - Requires [YOURLS](https://yourls.org) `1.91` and above.
 - This Page's Language is：:us: [English(US)](./en_US.md)
 - ---
-## Usage
+## Feature
 :bulb: description: Disable access to short addresses in some browsers and prompt to open them in other browsers
+
+Upstream:[another-short-link](https://github.com/8Mi-Tech/short-url-mini-cn)
+
+Based on the functional design specific to this project
 
 ---
 ## Installation
