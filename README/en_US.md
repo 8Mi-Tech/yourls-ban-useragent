@@ -18,7 +18,7 @@ Some great functional designs based on the [this project](https://github.com/8Mi
 4. Have fun!
 
 ---
-## 目标清单
+## To Do List
 Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
 | Status | Question |  Solved? |
 |-|-|-|
