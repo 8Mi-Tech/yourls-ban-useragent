@@ -1,22 +1,18 @@
-# [Plugin Name] [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
+# Ban User-Agent [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 
 <!-- Once you have committed code, get your plugin listed in Awesome YOURLS ! See https://github.com/YOURLS/awesome-yourls -->
 
-:bulb: Plugin short description: what it does
 
-Requires [YOURLS](https://yourls.org) `<here: min-version if applicable>` and above.
+Requires [YOURLS](https://yourls.org) `1.91` and above.
 
 ## Usage
-
-:bulb: This is a great place for showing a few usage examples!
-
-:camera: If applicable, a screenshot of the admin interface or anything relevant is super helpful
+:bulb: description: Disable access to short addresses in some browsers and prompt to open them in other browsers
 
 ## Installation
 
 :bulb: This is a great place for showing how to install the package. The common way is as below:
 
-1. In `/user/plugins`, create a new folder named `<here: your plugin folder name>`.
+1. In `/user/plugins`, create a new folder named `yourls-ban-useragent`. (Or you can use `git clone`)
 2. Drop these files in that directory.
 3. Go to the Plugins administration page (eg. `http://sho.rt/admin/plugins.php`) and activate the plugin.
 4. Have fun!
