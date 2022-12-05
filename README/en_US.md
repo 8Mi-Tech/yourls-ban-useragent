@@ -18,6 +18,15 @@ Some great functional designs based on the [this project](https://github.com/8Mi
 4. Have fun!
 
 ---
+## 目标清单
+Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
+| Status | Question |  Solved? |
+|-|-|-|
+| :x: | identify User-Agent |
+| :o: | Pages recognized and to be jumped to | [pls-use-other-ua.php](../pls-use-othher-ua.php) |
+| :x: | Support [URL Ads](https://github.com/8Mi-Tech/yourls-conditional-urlads) Plugin | 
+
+---
 ## License
 
 :bulb: The license might be updated with your terms.
