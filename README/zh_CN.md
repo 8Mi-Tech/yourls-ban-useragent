@@ -18,6 +18,4 @@
 
 ## License
 
-:bulb: 许可证可能会根据你的条款进行更新。
-
-这个软件包是根据[GPL3](LICENSE).
+本项目采用[GPLv3](../LICENSE)许可协议.
