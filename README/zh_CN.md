@@ -8,6 +8,8 @@
 
 :bulb: 介绍(E): 去他妈的微信和QQ浏览器
 
+基于[这个项目](https://github.com/8Mi-Tech/short-url-mini-cn)的主要功能设计，适配[YOURLS](https://yourls.org)
+
 ---
 ## 如何安装?
 
