@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Your Plugin Name
-Plugin URI: https://github.com/your_name/your_plugin
-Description: One line description of your plugin
+Plugin Name: Ban User-Agent
+Plugin URI: https://github.com/8Mi-Tech/yourls-ban-useragent
+Description: Disable access to short-links with something browser
 Version: 1.0
-Author: Your Name
-Author URI: https://your-site-if-any/
+Author: 8Mi-Tech
+Author URI: https://8mi.tech
 */
 
 // No direct call
