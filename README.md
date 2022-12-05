@@ -3,5 +3,5 @@
 Requires [YOURLS](https://yourls.org) `1.91` and above.
 
 Select language to view README.md
-- :cn: [中文(简体)](./README/zh_CN.md)
-- :us: [English(US)](./README/en_US.md)
+
+[:cn:](./README/zh_CN.md) / [:us:](./README/en_US.md)
