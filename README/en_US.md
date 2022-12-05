@@ -21,4 +21,4 @@ Requires [YOURLS](https://yourls.org) `1.91` and above.
 
 :bulb: The license might be updated with your terms.
 
-This package is licensed under the [MIT License](LICENSE).
+This package is licensed under the [GPLv3](../LICENSE).
