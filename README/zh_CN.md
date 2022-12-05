@@ -1,5 +1,6 @@
 # Ban User-Agent [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 - 需要安装 [YOURLS](https://yourls.org) 大于或等于`1.91`版本
+- 选择说明书语言: [:cn:](./README/zh_CN.md) / [:us:](./README/en_US.md) 
 - 当前页面语言为： :cn: [中文(简体)](./zh_CN.md)
 
 ---
