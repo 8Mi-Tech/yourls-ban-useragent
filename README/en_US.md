@@ -5,9 +5,7 @@
 ## Feature
 :bulb: description: Disable access to short addresses in some browsers and prompt to open them in other browsers
 
-Upstream:[another-short-link](https://github.com/8Mi-Tech/short-url-mini-cn)
-
-Based on the functional design specific to this project
+Some great functional designs based on the [this project](https://github.com/8Mi-Tech/short-url-mini-cn)
 
 ---
 ## Installation
