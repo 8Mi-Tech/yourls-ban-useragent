@@ -1,13 +1,11 @@
 # Ban User-Agent [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
-
-<!-- Once you have committed code, get your plugin listed in Awesome YOURLS ! See https://github.com/YOURLS/awesome-yourls -->
-
-
-Requires [YOURLS](https://yourls.org) `1.91` and above.
-
+- Requires [YOURLS](https://yourls.org) `1.91` and above.
+- This Page's Language is：:us: [English(US)](./en_US.md)
+- ---
 ## Usage
 :bulb: description: Disable access to short addresses in some browsers and prompt to open them in other browsers
 
+---
 ## Installation
 
 :bulb: This is a great place for showing how to install the package. The common way is as below:
@@ -17,6 +15,7 @@ Requires [YOURLS](https://yourls.org) `1.91` and above.
 3. Go to the Plugins administration page (eg. `http://sho.rt/admin/plugins.php`) and activate the plugin.
 4. Have fun!
 
+---
 ## License
 
 :bulb: The license might be updated with your terms.
