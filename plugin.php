@@ -8,74 +8,98 @@ Author: 8Mi-Tech
 Author URI: https://8mi.tech
 */
 if ( !defined( 'YOURLS_ABSPATH' ) ) die();
-// Register our plugin admin page
+// Register plugin admin page
 yourls_add_action( 'plugins_loaded', 'ban_useragent_add_page' );
 
 function ban_useragent_add_page() {
     yourls_register_plugin_page( 'ban_useragent', 'Ban UserAgent', 'ban_useragent_do_page' );
 }
+
 // Display admin page
 
 function ban_useragent_do_page() {
+
     // Check if a form was submitted
     if ( isset( $_POST[ 'banlist' ] ) ) {
         // Check nonce
         yourls_verify_nonce( 'ban_useragent' );
-        // Process form
-        ban_useragent_update_list( $_POST[ 'banlist' ] );
-        echo "<div class='updated'>Ban list updated.</div>";
+
+        // Process form submission
+        ban_useragent_update_options();
+
     }
-    // Get current list
-    $banlist = ban_useragent_get_list();
-    // Create nonce
-    $nonce = yourls_create_nonce( 'ban_useragent' );
+
+    // Get value from database ( saved with yourls_update_option )
+    $banlist = yourls_get_option( 'banlist' );
+
     echo <<<HTML
-    <h2>Ban UserAgent</h2>	<p>Enter a list of user agents to be banned from accessing your short URLs. Separate each user agent with a new line.</p>	<form method = 'post'>
+    <h2>Ban UserAgent</h2>
+
+    <form method = 'post'>
     <input type = 'hidden' name = 'nonce' value = "$nonce" />
-    <textarea name = 'banlist' cols = '50' rows = '10'>$banlist</textarea><br/>
-    <input type = 'submit' value = 'Update Ban List' />
+
+    <p><label for = 'banlist'>Enter the list of banned user agents, separated by commas:</label><br/>
+    <textarea name = 'banlist' id = 'banlist' cols = '50' rows = '10'>$banlist</textarea></p>
+
+    <p><input type = 'submit' value = 'Save' /></p>
+
     </form>
     HTML;
 }
-// Update ban list
 
-function ban_useragent_update_list( $list ) {
+// Update option in database
 
-    $list = trim( $list );
-    // remove whitespace from beginning and end of list     // Sanitize list
-    $list = preg_replace( '/[^A-Za-z0-9\s\-\._]/', '', $list );
-    // only allow alphanumeric characters, spaces, hyphens, underscores and periods     // Update list in database
-    yourls_update_option( 'banlist', $list );
-    return true;
+function ban_useragent_update_options() {
 
+    $in = $_POST[ 'banlist' ];
+
+    $in = strtolower( $in );
+    // convert to lowercase
+
+    $in = preg_replace( '/[^a-z0-9,]/', '', $in );
+    // remove all non-alphanumeric characters
+
+    $in = preg_replace( '/[,]+/', ',', $in );
+    // remove duplicate commas
+
+    $in = trim( $in, ',' );
+    // remove leading and trailing commas
+
+    yourls_update_option( 'banlist', $in );
+    // save to database
+
+    yourls_redirect( yourls_admin_url( 'plugins.php?page=ban_useragent&updated=true' ) );
+    // Redirect to the page and add a parameter to indicate the settings were saved
 }
-// Get ban list from database
 
-function ban_useragent_get_list() {
-    // Get list from database
-    $list = yourls_get_option( 'banlist' );
-    return $list;
+// Hook the redirect process
+yourls_add_action( 'pre_redirect', 'ban_useragent_check' );
 
-}
-// Check if user agent is in ban list
+function ban_useragent_check( $args ) {
 
-function ban_useragent() {
-    // Get user agent string from browser request header
-    $ua = $_SERVER[ 'HTTP_USER_AGENT' ];
-    // Get ban list from database
-    $banlist = ban_useragent_get_list();
-    // Split ban list into an array of user agents to be banned
-    $banned = explode( '\n', $banlist );
-    // Check if user agent is in the ban list
-    if ( in_array( $ua, $banned ) ) {
-        // Include file with alternative content for banned user agents
-        include( 'pls-use-oth-ua.php' );
-        // Stop execution of script
-        die();
-    } else {
-        return true;
+    $url = $args[ 0 ];
+    $code = $args[ 1 ];
+
+    $banlist = yourls_get_option( 'banlist' );
+    // get the list of banned user agents
+
+    if ( !empty( $banlist ) ) {
+        // if the list is not empty
+
+        $useragent = strtolower( $_SERVER[ 'HTTP_USER_AGENT' ] );
+        // get the user agent
+
+        $banned = explode( ',', $banlist );
+        // convert the list to an array
+
+        foreach ( $banned as $ban ) {
+            // loop through the array
+            if ( strpos( $useragent, $ban ) !== false ) {
+                // check if the user agent contains a banned keyword
+                include( 'pls-use-other-ua.php' );
+                // include a page telling the user to use a different browser
+                die();
+            }
+        }
     }
-
 }
-// Hook into pre-redirect check and call our function to check for banned user agents
-yourls_add_action( 'pre-redirect', 'ban_useragent' );
