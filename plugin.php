@@ -20,6 +20,9 @@ function ban_useragent() {
 
     // Get the list of banned user agents from the options page
     $banned_useragents = yourls_get_option( 'banned_useragents' );
+    if (empty($banned_useragents)) {
+    $banned_useragents = array('#WeChat#', '#QQTheme#');
+    }
 
     // Check if the user agent is in the list of banned user agents
     if ( in_array( $user_agent, $banned_useragents ) ) {
