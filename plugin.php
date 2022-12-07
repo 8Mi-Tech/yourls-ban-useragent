@@ -24,10 +24,13 @@ function ban_useragent() {
     #$banned_useragents = array('#WeChat#', '#QQTheme#');
     #}
 
-if (preg_match('/#WeChat#|#QQTheme#/i', $user_agent)) {
-    include 'pls-use-other-ua.php';
+if(preg_match('#QQTheme#i', $ua, $matches)|preg_match('#WeChat#i', $ua, $matches)){
+    $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
+    $ym = $http_type . $_SERVER['HTTP_HOST'];
+	$y_url = $ym.'/'.$_GET['uid'];
+    include("pls-use-other-ua.php");
     die();
-} 
+    }
     // Check if the user agent is in the list of banned user agents
     #if ( in_array( $user_agent, $banned_useragents ) ) {
 
