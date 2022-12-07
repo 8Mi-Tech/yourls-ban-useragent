@@ -24,11 +24,11 @@
 ---
 ## 目标清单
 状态标志    :x: 未解决    :o: 解决   :question: 未知状态
-| 状态 | 问题 |  解决方案 |
-|-|-|-|
-| :x: | 识别User-Agent |
+| 状态 | 问题 |  解决方案 | 备注 |
+|-|-|-|-|
+| :question: | 识别User-Agent | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | 只识别了微信和QQ,没有支持自定义UserAgent|
 | :o: | 跳转页面 | [pls-use-other-ua.php](../pls-use-othher-ua.php) |
-| :x: | 使 [urlads](https://github.com/8Mi-Tech/yourls-conditional-urlads) 插件支持 | 
+| :o: | 使 [urlads](https://github.com/8Mi-Tech/yourls-conditional-urlads) 插件支持 | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | 插件太强，直接接管 |
 
 ---
 ## License
