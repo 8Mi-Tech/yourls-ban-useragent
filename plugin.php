@@ -40,7 +40,7 @@ if(preg_match('#QQTheme#i', $ua, $matches)|preg_match('#WeChat#i', $ua, $matches
         // Stop execution of the script
        #die();
 
-    }
+    #}
 }
 
 // Register our plugin admin page
