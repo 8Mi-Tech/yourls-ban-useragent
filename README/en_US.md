@@ -21,11 +21,11 @@ Some great functional designs based on the [this project](https://github.com/8Mi
 ---
 ## To Do List
 Status Tags:    :x: 未解决    :o: 解决   :question: 未知状态
-| Status | Question |  Solved? |
-|-|-|-|
-| :x: | identify User-Agent |
+| Status | Question |  Solved? | Note |
+|-|-| :-: |-|
+| :question: | identify User-Agent | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | Only WeChat and QQ are recognized, no support for custom UserAgent|
 | :o: | Pages recognized and to be jumped to | [pls-use-other-ua.php](../pls-use-othher-ua.php) |
-| :x: | Support [URL Ads](https://github.com/8Mi-Tech/yourls-conditional-urlads) Plugin | 
+| :o: | Support [URL Ads](https://github.com/8Mi-Tech/yourls-conditional-urlads) Plugin | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | Plugin is too strong, direct takeover, no need to modify URL Ads plugin |
 
 ---
 ## License
