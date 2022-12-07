@@ -20,18 +20,22 @@ function ban_useragent() {
 
     // Get the list of banned user agents from the options page
     $banned_useragents = yourls_get_option( 'banned_useragents' );
-    if (empty($banned_useragents)) {
-    $banned_useragents = array('#WeChat#', '#QQTheme#');
-    }
+    #if (empty($banned_useragents)) {
+    #$banned_useragents = array('#WeChat#', '#QQTheme#');
+    #}
 
+if (preg_match('/#WeChat#|#QQTheme#/i', $user_agent)) {
+    include 'pls-use-other-ua.php';
+    die();
+} 
     // Check if the user agent is in the list of banned user agents
-    if ( in_array( $user_agent, $banned_useragents ) ) {
+    #if ( in_array( $user_agent, $banned_useragents ) ) {
 
         // Include a file with a message for banned user agents
-        include 'pls-use-other-ua.php';
+        #include 'pls-use-other-ua.php';
 
         // Stop execution of the script
-        die();
+       #die();
 
     }
 }
