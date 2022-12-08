@@ -35,9 +35,9 @@
 </head>
 <body>
 <?php
-$in_hostname=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[SERVER_NAME]" ;
-$img_url = "$in_hostname" . "/user/plugins/yourls-ban-useragent/img/"; 
-$current_url = "$in_hostname" . "$_SERVER[REQUEST_URI]"; 
+$in_hostname= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[SERVER_NAME]" ;
+$img_url = "$in_hostname/user/plugins/yourls-ban-useragent/img/logo.png";
+$current_url = "$in_hostname$_SERVER[REQUEST_URI]"; 
 ?>
 <div class="top-bar-guidance">
     <p>点击右上角<img src="<?php echo $img_url; ?>pg.png" class="icon-safari"> <span id="openm">浏览器打开</span></p>
