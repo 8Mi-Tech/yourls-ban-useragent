@@ -36,11 +36,11 @@
 <body>
 <?php
 $in_hostname= (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[SERVER_NAME]" ;
-$img_url = "$in_hostname/user/plugins/yourls-ban-useragent/img/";
+$logo_url = "$in_hostname/user/plugins/yourls-ban-useragent/img/";
 $current_url = "$in_hostname$_SERVER[REQUEST_URI]"; 
 ?>
 <div class="top-bar-guidance">
-    <p>点击右上角<img src="<?php echo $img_url; ?>pg.png" class="icon-safari"> <span id="openm">浏览器打开</span></p>
+    <p>点击右上角<img src="<?php echo $logo_url; ?>pg.png" class="icon-safari"> <span id="openm">浏览器打开</span></p>
     <p>可以继续浏览本站哦~</p>
 </div>
 <a style="display: none;" href="" id="vurl" rel="noreferrer"></a>
@@ -49,12 +49,12 @@ $current_url = "$in_hostname$_SERVER[REQUEST_URI]";
 2.建议用QQ浏览器打开效果最佳<br /><br >
 </div>
 <div id="browser">
-    <a href="mttbrowser://url=<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>qq.jpg"></img></a>
-    <a href="googlechrome://browse?url=<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>360.jpg"></img></a>
-    <a href="alipays://platformapi/startapp?appId=20000067&url=<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>zfb.jpg"></img></a>
-    <a href="googlechrome://browse?url=<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>gg.jpg"></img></a>
-    <a href="ucbrowser://<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>sh.jpg"></img></a>
-    <a href="bdbrowser://<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>bd.jpg"></img></a>
+    <a href="mttbrowser://url=<?php echo $current_url; ?>"><img src="<?php echo $logo_url; ?>qq.jpg"></img></a>
+    <a href="googlechrome://browse?url=<?php echo $current_url; ?>"><img src="<?php echo $logo_url; ?>360.jpg"></img></a>
+    <a href="alipays://platformapi/startapp?appId=20000067&url=<?php echo $current_url; ?>"><img src="<?php echo $logo_url; ?>zfb.jpg"></img></a>
+    <a href="googlechrome://browse?url=<?php echo $current_url; ?>"><img src="<?php echo $logo_url; ?>gg.jpg"></img></a>
+    <a href="ucbrowser://<?php echo $current_url; ?>"><img src="<?php echo $logo_url; ?>sh.jpg"></img></a>
+    <a href="bdbrowser://<?php echo $current_url; ?>"><img src="<?php echo $logo_url; ?>bd.jpg"></img></a>
 </div>
 <div class="app-download-tip">
     <span class="guidance-desc">点击上方图标or复制本站网址自行打开</span>
