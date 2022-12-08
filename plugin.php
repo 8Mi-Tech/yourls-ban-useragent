@@ -25,9 +25,9 @@ function ban_useragent() {
     #}
 
 if(preg_match('#QQTheme#i', $user_agent, $matches)|preg_match('#WeChat#i', $user_agent, $matches)){
-    $http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
-    $ym = $http_type . $_SERVER['HTTP_HOST'];
-	$y_url = $ym.'/'.$_GET['uid'];
+	#$http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https://' : 'http://';
+	#$ym = $http_type . $_SERVER['HTTP_HOST'];
+	#$y_url = $ym.'/'.$_GET['uid'];
     include("pls-use-other-ua.php");
     die();
     }
