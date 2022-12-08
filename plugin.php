@@ -2,7 +2,7 @@
 /*
 Plugin Name: BlackList User-Agent
 Plugin URI: https://github.com/8Mi-Tech/yourls-ban-useragent
-Description: Disable access to short-links with something browser
+Description: A simple plugin to blacklist User-Agent from shortening URLs.
 Version: 1.0
 Author: 8Mi-Tech
 Author URI: https://8mi.tech
