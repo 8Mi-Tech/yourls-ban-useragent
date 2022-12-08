@@ -34,7 +34,11 @@
     </style>
 </head>
 <body>
-<?php $img_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[SERVER_NAME]/user/plugins/yourls-ban-useragent/img/"; ?>
+<?php
+$in_hostname=(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[SERVER_NAME]" ;
+$img_url = "$in_hostname" . "/user/plugins/yourls-ban-useragent/img/"; 
+$current_url = "$in_hostname" . "$_SERVER[REQUEST_URI]"; 
+?>
 <div class="top-bar-guidance">
     <p>点击右上角<img src="<?php echo $img_url; ?>pg.png" class="icon-safari"> <span id="openm">浏览器打开</span></p>
     <p>可以继续浏览本站哦~</p>
@@ -44,7 +48,6 @@
 1.防止腾讯屏蔽本站链接<br /><br />
 2.建议用QQ浏览器打开效果最佳<br /><br >
 </div>
-<?php $current_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[SERVER_NAME]$_SERVER[REQUEST_URI]"; ?>
 <div id="browser">
     <a href="mttbrowser://url=<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>qq.jpg"></img></a>
     <a href="googlechrome://browse?url=<?php echo $current_url; ?>"><img src="<?php echo $img_url; ?>360.jpg"></img></a>
