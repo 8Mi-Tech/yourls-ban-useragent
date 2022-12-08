@@ -48,7 +48,7 @@ yourls_add_action( 'plugins_loaded', 'ban_useragent_add_page' );
 
 function ban_useragent_add_page() {
 
-    yourls_register_plugin_page( 'ban-useragent', 'Ban UserAgent', 'ban_useragent_do_page' );
+    yourls_register_plugin_page( 'ban-useragent', 'BlackList User-Agent', 'ban_useragent_do_page' );
 
 }
 
