@@ -56,7 +56,7 @@
     <span class="guidance-desc">点击上方图标or复制本站网址自行打开</span>
 </div>
 </script>
-<input class="app-download-btn" type="text" value="<?php echo $y_url; ?>" lass="app-download-btn" readonly="readonly" id="url" onclick="copyUrl()">
+<input class="app-download-btn" type="text" value="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")  . "://$_SERVER[HTTP_HOST]/$_SERVER[REQUEST_URI]"; ?>" lass="app-download-btn" readonly="readonly" id="url" onclick="copyUrl()">
 
 <script type="text/javascript">
 function copyUrl(){
