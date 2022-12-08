@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Ban User-Agent
+Plugin Name: BlackList User-Agent
 Plugin URI: https://github.com/8Mi-Tech/yourls-ban-useragent
 Description: Disable access to short-links with something browser
 Version: 1.0
