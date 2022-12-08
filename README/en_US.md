@@ -4,15 +4,11 @@
 - This Page's Language is：:us: [English(US)](./en_US.md)
 - ---
 ## Feature
-:bulb: description: Disable access to short addresses in some browsers and prompt to open them in other browsers
-
+:bulb: description: Disable access to short addresses in some browsers and prompt to open them in other browsers<br>
 Some great functional designs based on the [this project](https://github.com/8Mi-Tech/short-url-mini-cn)
 
 ---
 ## Installation
-
-:bulb: This is a great place for showing how to install the package. The common way is as below:
-
 1. In `/user/plugins`, create a new folder named `yourls-ban-useragent`. (Or you can use `git clone`)
 2. Drop these files in that directory.
 3. Go to the Plugins administration page (eg. `http://sho.rt/admin/plugins.php`) and activate the plugin.
