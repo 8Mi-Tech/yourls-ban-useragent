@@ -21,9 +21,10 @@
 状态标识：:x: 未解决 / :o: 已解决 / :question: 未知状态
 | 状态 | 问题 |  解决方案 | 备注 |
 |-|-|-|-|
-| :question: | 识别User-Agent | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | 只识别了微信和QQ,没有支持自定义UserAgent|
+| :o: | 识别User-Agent | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | 准确的说，我们已经做到识别了，但还不够 |
 | :o: | 跳转页面 | [pls-use-other-ua.php](../pls-use-othher-ua.php) |
 | :o: | 使 [urlads](https://github.com/8Mi-Tech/yourls-conditional-urlads) 插件支持 | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | 插件太强，直接接管 |
+| :x: | 在管理页面添加<br>自定义黑名单、<br>规则列表系统、<br>和被其他插件Hook |  | 要在管理页面添加<br>第一块是规则列表<br>第二块是自定义规则表
 
 ---
 ## License

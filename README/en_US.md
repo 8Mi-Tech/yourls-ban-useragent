@@ -22,6 +22,7 @@ Status Tags：:x: Not Solve / :o: Solved / :question: Unknown
 | :question: | identify User-Agent | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | Only detect WeChat/QQ User-Agent,<br> no support for custom UserAgent|
 | :o: | Pages recognized and to be jumped to | [pls-use-other-ua.php](../pls-use-othher-ua.php) |
 | :o: | Support [URL Ads](https://github.com/8Mi-Tech/yourls-conditional-urlads) Plugin | [c41edc8](https://github.com/8Mi-Tech/yourls-ban-useragent/commit/c41edc8749f1fb11020187c714881177e68825ad) | Plugin is too strong,<br>direct takeover,<br>no need to modify URL Ads plugin |
+| :x: | Add in the administration page<br>Custom Blacklist User-Agent<br>Rule-List System、<br>and Hook by other plugins |  | To add to the admin page<br>1. Rules list<br>2.Custom rule list
 
 ---
 ## License
